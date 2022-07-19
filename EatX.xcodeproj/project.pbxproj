@@ -11,6 +11,9 @@
 		34DAEEC42886A51900CE1A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEEC32886A51900CE1A45 /* ContentView.swift */; };
 		34DAEEC62886A51A00CE1A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DAEEC52886A51A00CE1A45 /* Assets.xcassets */; };
 		34DAEEC92886A51A00CE1A45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DAEEC82886A51A00CE1A45 /* Preview Assets.xcassets */; };
+		34DAEED02886A5F100CE1A45 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEECF2886A5F100CE1A45 /* FoodModel.swift */; };
+		34DAEED22886A60D00CE1A45 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEED12886A60D00CE1A45 /* ModelData.swift */; };
+		34DAEED42886A79900CE1A45 /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEED32886A79900CE1A45 /* FoodCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		34DAEEC32886A51900CE1A45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		34DAEEC52886A51A00CE1A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34DAEEC82886A51A00CE1A45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		34DAEECF2886A5F100CE1A45 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		34DAEED12886A60D00CE1A45 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		34DAEED32886A79900CE1A45 /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 				34DAEEC12886A51900CE1A45 /* EatXApp.swift */,
 				34DAEEC32886A51900CE1A45 /* ContentView.swift */,
 				34DAEEC52886A51A00CE1A45 /* Assets.xcassets */,
+				34DAEED12886A60D00CE1A45 /* ModelData.swift */,
+				34DAEECF2886A5F100CE1A45 /* FoodModel.swift */,
+				34DAEED32886A79900CE1A45 /* FoodCard.swift */,
 				34DAEEC72886A51A00CE1A45 /* Preview Content */,
 			);
 			path = EatX;
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DAEEC42886A51900CE1A45 /* ContentView.swift in Sources */,
+				34DAEED22886A60D00CE1A45 /* ModelData.swift in Sources */,
+				34DAEED42886A79900CE1A45 /* FoodCard.swift in Sources */,
 				34DAEEC22886A51900CE1A45 /* EatXApp.swift in Sources */,
+				34DAEED02886A5F100CE1A45 /* FoodModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
