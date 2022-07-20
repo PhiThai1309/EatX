@@ -11,7 +11,7 @@ import SwiftUI
 struct Food: Identifiable, Codable {
     var id: Int
     var name: String
-    var photoCredit: String
+    var meal: String
     var price: Float
     var description: String
     
