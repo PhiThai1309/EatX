@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3465ADCF288F7B4000A670CE /* FoodCardIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */; };
+		3465ADD4288F7C6F00A670CE /* FoodCardPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */; };
+		3465ADD6288F7CCB00A670CE /* FoodCardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */; };
 		34DAEEC22886A51900CE1A45 /* EatXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEEC12886A51900CE1A45 /* EatXApp.swift */; };
 		34DAEEC42886A51900CE1A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DAEEC32886A51900CE1A45 /* ContentView.swift */; };
 		34DAEEC62886A51A00CE1A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34DAEEC52886A51A00CE1A45 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardIntroduction.swift; sourceTree = "<group>"; };
+		3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardPrice.swift; sourceTree = "<group>"; };
+		3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardHeader.swift; sourceTree = "<group>"; };
 		34DAEEBE2886A51900CE1A45 /* EatX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DAEEC12886A51900CE1A45 /* EatXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatXApp.swift; sourceTree = "<group>"; };
 		34DAEEC32886A51900CE1A45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,10 +46,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3465ADD0288F7BD900A670CE /* FoodModel */ = {
+			isa = PBXGroup;
+			children = (
+				34DAEECF2886A5F100CE1A45 /* FoodModel.swift */,
+				34DAEED12886A60D00CE1A45 /* ModelData.swift */,
+			);
+			path = FoodModel;
+			sourceTree = "<group>";
+		};
+		3465ADD1288F7C0000A670CE /* FoodCard */ = {
+			isa = PBXGroup;
+			children = (
+				34DAEED32886A79900CE1A45 /* FoodCard.swift */,
+				3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */,
+				3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */,
+				3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */,
+			);
+			path = FoodCard;
+			sourceTree = "<group>";
+		};
+		3465ADD2288F7C0E00A670CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34DAEEC12886A51900CE1A45 /* EatXApp.swift */,
+				34DAEEC32886A51900CE1A45 /* ContentView.swift */,
+				3465ADD1288F7C0000A670CE /* FoodCard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		34DAEEB52886A51900CE1A45 = {
 			isa = PBXGroup;
 			children = (
-				34DAEED52886C97E00CE1A45 /* MealIcon.swift */,
 				34DAEEC02886A51900CE1A45 /* EatX */,
 				34DAEEBF2886A51900CE1A45 /* Products */,
 			);
@@ -60,12 +95,10 @@
 		34DAEEC02886A51900CE1A45 /* EatX */ = {
 			isa = PBXGroup;
 			children = (
-				34DAEEC12886A51900CE1A45 /* EatXApp.swift */,
-				34DAEEC32886A51900CE1A45 /* ContentView.swift */,
+				3465ADD2288F7C0E00A670CE /* Views */,
+				3465ADD0288F7BD900A670CE /* FoodModel */,
 				34DAEEC52886A51A00CE1A45 /* Assets.xcassets */,
-				34DAEED12886A60D00CE1A45 /* ModelData.swift */,
-				34DAEECF2886A5F100CE1A45 /* FoodModel.swift */,
-				34DAEED32886A79900CE1A45 /* FoodCard.swift */,
+				34DAEED52886C97E00CE1A45 /* MealIcon.swift */,
 				34DAEEC72886A51A00CE1A45 /* Preview Content */,
 			);
 			path = EatX;
@@ -152,7 +185,10 @@
 				34DAEEC42886A51900CE1A45 /* ContentView.swift in Sources */,
 				34DAEED22886A60D00CE1A45 /* ModelData.swift in Sources */,
 				34DAEED42886A79900CE1A45 /* FoodCard.swift in Sources */,
+				3465ADD4288F7C6F00A670CE /* FoodCardPrice.swift in Sources */,
+				3465ADCF288F7B4000A670CE /* FoodCardIntroduction.swift in Sources */,
 				34DAEED62886C97E00CE1A45 /* MealIcon.swift in Sources */,
+				3465ADD6288F7CCB00A670CE /* FoodCardHeader.swift in Sources */,
 				34DAEEC22886A51900CE1A45 /* EatXApp.swift in Sources */,
 				34DAEED02886A5F100CE1A45 /* FoodModel.swift in Sources */,
 			);
