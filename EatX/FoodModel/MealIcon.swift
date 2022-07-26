@@ -8,15 +8,19 @@
 import Foundation
 import SwiftUI
 
+var MealType = ["All", "Breakfast", "Dessert"]
+
 struct MealIcon: View {
     var meal: String
     
     var body: some View {
-        if(meal.lowercased() == "breakfast") {
-            Image(systemName: "sun.haze")
-        } else if(meal.lowercased() == "dessert") {
+        switch meal {
+        case MealType[1]:
+            Text("🍳")
+        case MealType[2]:
+            Text("🍰")
+        default:
             Image(systemName: "fork.knife")
         }
-        
     }
 }

@@ -13,12 +13,13 @@ struct FoodCardHeader: View {
     
     var body: some View{
         Text(food.name)
-            .font(.largeTitle)
+            .font(.title)
             .fontWeight(.heavy)
+        Spacer(minLength: 10)
         HStack{
             MealIcon(meal: food.meal)
             Text(food.meal)
-        }.padding(.top, 0.1)
-        Spacer(minLength: 20)
+        }.padding(.bottom, 10)
+//        Spacer(minLength: 20)
     }
 }

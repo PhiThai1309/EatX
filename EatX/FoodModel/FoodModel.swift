@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Food: Identifiable, Codable {
+struct Food: Identifiable, Codable, Hashable {
     var id: Int
     var name: String
     var meal: String

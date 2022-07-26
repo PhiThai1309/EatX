@@ -15,7 +15,7 @@ struct FoodCardIntroduction: View {
     var body: some View {
         Divider()
         Text("Introduction")
-            .font(.title)
+            .font(.title2)
             .fontWeight(.heavy)
             .padding(.top, 20)
             .padding(.bottom, 5)
