@@ -64,12 +64,13 @@ struct ContentView: View {
                     }
                     .frame(width: 30, height: 30)
                     .padding()
-                    .background(.green)
+                    .background(.orange)
                     .clipShape(Capsule())
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * -25)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * -70)
                 }
                 .frame(height: 1)
             }
+            .ignoresSafeArea(.container, edges: .bottom)
         }
         .accentColor(.black)
     }

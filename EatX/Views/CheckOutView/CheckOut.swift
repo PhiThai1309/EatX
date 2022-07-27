@@ -23,35 +23,52 @@ struct CheckOut: View {
     var body: some View {
         NavigationView{
             VStack() {
-                Text("Thank you for using EatX")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 5)
-                Text("Your order has been confirmed!")
-                    .font(.headline)
-                    .fontWeight(.light)
-                Text(totalPrice, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-                Spacer()
-                Text("Order summary: ")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 50)
-                    .padding([.leading], 20)
-                ScrollView{
-                    ForEach(orderList){
-                        order in
-                        Text(order.name)
-                            .padding(5)
-                        Divider()
-                            .padding(.horizontal, 20)
+                if(totalPrice == 0) {
+                    Image(systemName: "cart.badge.minus")
+                        .font(.system(size: 50, weight: .bold))
+                        .foregroundColor(Color.gray)
+                    Text("Your cart is empty")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 5)
+                        .foregroundColor(Color.gray)
+                    Text("Please select a food to proceed")
+                        .font(.title3)
+                        .fontWeight(.light)
+                        .padding(.vertical, 100)
+                        .foregroundColor(Color.gray)
+                    Spacer()
+                } else {
+                    Text("Thank you for using EatX")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 5)
+                    Text("Your order has been confirmed!")
+                        .font(.headline)
+                        .fontWeight(.light)
+                    Text(totalPrice, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                    Spacer()
+                    Text("Order summary: ")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 50)
+                        .padding([.leading], 20)
+                    ScrollView{
+                        ForEach(orderList){
+                            order in
+                            Text(order.name)
+                                .padding(5)
+                            Divider()
+                                .padding(.horizontal, 20)
+                        }
                     }
+                    .padding(5)
+                    Spacer()
                 }
-                .padding(5)
-                Spacer()
             }
             .navigationBarItems(trailing: Button(action: {
                 self.showSheetView = false

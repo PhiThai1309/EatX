@@ -20,6 +20,6 @@ struct FoodCardHeader: View {
             MealIcon(meal: food.meal)
             Text(food.meal)
         }.padding(.bottom, 10)
-//        Spacer(minLength: 20)
+            .foregroundColor(Color.gray)
     }
 }

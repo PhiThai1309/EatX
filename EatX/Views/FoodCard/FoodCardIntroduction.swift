@@ -24,10 +24,8 @@ struct FoodCardIntroduction: View {
             if(!expandable) {
                 Text(food.description)
                     .lineLimit(1)
-                    .transition(.opacity)
             } else {
                 Text(food.description)
-                    .transition(.opacity)
             }
         }
         Spacer()

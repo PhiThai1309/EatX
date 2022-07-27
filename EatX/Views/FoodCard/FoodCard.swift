@@ -41,7 +41,7 @@ struct FoodCard: View {
                 }
                 .frame(width: 250)
                 .padding()
-                .background(.green)
+                .background(.orange)
                 .clipShape(Capsule())
                 .foregroundColor(.white)
                 .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
