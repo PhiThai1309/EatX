@@ -63,6 +63,7 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "cart")
                             .font(.system(size: 20, weight: .regular))
+                            .foregroundColor(.white)
                     } .sheet(isPresented: $isShowingDetailView){
                         CheckOut()
                     }
@@ -70,7 +71,6 @@ struct ContentView: View {
                     .padding()
                     .background(.green)
                     .clipShape(Capsule())
-                    .foregroundColor(.white)
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * -25)
                 }
                 .frame(height: 1)

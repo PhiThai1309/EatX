@@ -14,7 +14,6 @@ struct CheckOut: View {
             Text("Thank you for using our service")
                 .font(.title2)
                 .fontWeight(.semibold)
-                .foregroundColor(Color.black)
                 .padding(.top, 50)
             Spacer()
             Text(2, format: .currency(code: Locale.current.currencyCode ?? "USD"))
