@@ -21,7 +21,6 @@ struct CheckOut: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.vertical)
-            
         }
     }
     
