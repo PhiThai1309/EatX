@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-var MealType = ["All", "Breakfast", "Dessert"]
+var MealType = ["All", "Breakfast", "Dessert", "Mains", "Drinks"]
 
 struct MealIcon: View {
     var meal: String
@@ -19,6 +19,10 @@ struct MealIcon: View {
             Text("🍳")
         case MealType[2]:
             Text("🍰")
+        case MealType[3]:
+            Text("🍲")
+        case MealType[4]:
+            Text("🍹")
         default:
             Image(systemName: "fork.knife")
         }

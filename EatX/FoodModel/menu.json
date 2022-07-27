@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Maple French Toast",
+        "meal": "Breakfast",
+        "price": 6,
+        "description": "Sweet, fluffy, and served piping hot, our French toast is flown in fresh every day from Maple City, Canada, which is where all maple syrup in the world comes from. And if you believe that, we have some land to sell you…"
+    },
+    {
+        "id": 2,
+        "name": "Fresh Croissant",
+        "meal": "Breakfast",
+        "price": 3,
+        "description": "This is just a regular croissant that we buy in bulk from a frozen foods supermarket, but we needed some sort of adjective to justify our price. So, it was either \"fresh-baked\" or \"authentic Parisian\", and our legal team thinks the latter is probably going to land us in hot water."
+    },
+    {
+        "id": 3,
+        "name": "Stack-o-Pancakes",
+        "meal": "Breakfast",
+        "price": 10,
+        "description": "What do you get? Pancakes! How many do you get? One metric stack! That's equivalent to 1000 millistacks, or a tenth of a kilostack. In short, you get a lot of pancakes."
+    },
+    {
+        "id": 4,
+        "name": "Strawberry Surprise",
+        "meal": "Dessert",
+        "price": 6,
+        "description": "Bob, people keep asking us why this thing has D and V for its restrictions, and it's making other customers worry that we are some sort of D&V hotspot. [NOTE FOR BOB: Can we find another word for dairy intolerance?]"
+    },
+    {
+        "id": 5,
+        "name": "Porridge Deluxe",
+        "meal": "Breakfast",
+        "price": 4,
+        "description": "This is literally just porridge. Bob, where did you get this picture? Our porridge looks nothing like this. No porridge does – who the heck has the time to make porridge like this? [NOTE FOR BOB: Replace this with actual marketing text]"
+    },
+    {
+        "id": 6,
+        "name": "Mushroom Tagliatelle",
+        "meal": "Mains",
+        "price": 12,
+        "description": "If you're the kind of fun guy (sorry not sorry) that likes salami-filled Italian food with a twist, this is the perfect dish for you. The twist? We lied about the meat."
+    },
+    {
+        "id": 7,
+        "name": "Fillet Steak",
+        "meal": "Mains",
+        "price": 20,
+        "description": "It's a steak. It's not aged, it's not rubbed in kosher salt, it's not \"hand-cut\" or some other gibberish – it's just a slab of cow on a plate. Might come with sweet potato fries if you ask nicely."
+    },
+    {
+        "id": 8,
+        "name": "Strawberry Cooler",
+        "meal": "Drinks",
+        "price": 6,
+        "description": "Step 1: Blend some frozen strawberries. Step 3: Profit! If you're reading this it means you've figured out step 2 for yourself."
+    },
+    {
+        "id": 9,
+        "name": "Macarons Galore",
+        "meal": "Dessert",
+        "price": 8,
+        "description": "For times when one, two, or even three macarons aren't enough, we're proud to present macarons galore – four macarons, to fully satisfy your craving for these sweet almondy delights!"
+    },
+]

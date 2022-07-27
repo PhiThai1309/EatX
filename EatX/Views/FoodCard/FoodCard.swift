@@ -13,10 +13,7 @@ struct FoodCard: View {
     
     var body: some View {
         VStack() {
-            Image(food.mainImage)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 400, alignment: .center)
+            FoodImage(food: food)
             ScrollView{
                 VStack(alignment: .leading) {
                     FoodCardHeader(food: food)
@@ -25,6 +22,13 @@ struct FoodCard: View {
                 }
                 .padding()
                 Spacer()
+            }
+            //            ZStack {
+            //                .position(x: .infinity, y: 200)
+            //                    .frame(height: 100)
+            //            }
+            GeometryReader{
+                geometry in
                 Button{
                     //                cartItems.add(item: food)
                     //                print(cartItems.items[0])
@@ -36,15 +40,13 @@ struct FoodCard: View {
                 .background(.green)
                 .clipShape(Capsule())
                 .foregroundColor(.white)
-                
+                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
             }
-            //            ZStack {
-            //                .position(x: .infinity, y: 200)
-            //                    .frame(height: 100)
-            //            }
+            .frame(height: 100)
         }
         .ignoresSafeArea()
         .accentColor(.blue)
+        
     }
 }
 

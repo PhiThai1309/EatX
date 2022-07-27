@@ -17,50 +17,64 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isShowingDetailView = false
     @State private var selectedMeal = "All"
     @State var searchQuery = ""
     @State var filteredRecipes = foods
     
-    @ViewBuilder
-    func foodFilter() -> some View {
-        if(selectedMeal == "All"){
-            ListView(foods: filteredRecipes)
-        } else {
-            FilterView(foods: filteredRecipes, filter: selectedMeal)
-        }
-    }
     
     var body: some View {
         NavigationView {
-            foodFilter()
-                .navigationBarTitle("EatX")
-                .onChange(of: searchQuery) { _ in
-                    searchRecipes()
-                }
-                .searchable(text: $searchQuery, prompt: "Search by meal name")
-                .onSubmit(of: .search) {
-                    searchRecipes()
-                }
-            
-                .toolbar {
-                    ToolbarItem(id: "1", placement: .navigationBarTrailing) {
-                        Menu {
-                            Picker(selection: $selectedMeal, label: Text("Sorting options")) {
-                                ForEach(MealType, id: \.self){
-                                    Button($0, action: {
-                                        filteredRecipes = foods.filter {
-                                            $0.meal
-                                                .localizedCaseInsensitiveContains(selectedMeal)
-                                        }
-                                    })
+            VStack{
+                foodFilter()
+                    .navigationBarTitle("EatX")
+                    .onChange(of: searchQuery) { _ in
+                        searchRecipes()
+                    }
+                    .searchable(text: $searchQuery, prompt: "Search by meal name")
+                    .onSubmit(of: .search) {
+                        searchRecipes()
+                    }
+                
+                    .toolbar {
+                        ToolbarItem(id: "1", placement: .navigationBarTrailing) {
+                            Menu {
+                                Picker(selection: $selectedMeal, label: Text("Sorting options")) {
+                                    ForEach(MealType, id: \.self){
+                                        Button($0, action: {
+                                            filteredRecipes = foods.filter {
+                                                $0.meal
+                                                    .localizedCaseInsensitiveContains(selectedMeal)
+                                            }
+                                        })
+                                    }
                                 }
+                            } label: {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
                             }
-                        } label: {
-                            Image(systemName: "line.3.horizontal.decrease.circle")
                         }
                     }
+                GeometryReader{
+                    geometry in
+//                    NavigationLink(destination: CheckOut(), isActive: $isShowingDetailView) {}
+                    
+                    Button(){
+                        isShowingDetailView.toggle()
+                    } label: {
+                        Image(systemName: "cart")
+                            .font(.system(size: 20, weight: .regular))
+                    } .sheet(isPresented: $isShowingDetailView){
+                        CheckOut()
+                    }
+                    .frame(width: 30, height: 30)
+                    .padding()
+                    .background(.green)
+                    .clipShape(Capsule())
+                    .foregroundColor(.white)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * -25)
                 }
-            //            .navigationBarTitleDisplayMode(.inline)
+                .frame(height: 1)
+            }
         }
         .accentColor(.black)
     }
@@ -84,6 +98,15 @@ struct ContentView: View {
                 .localizedCaseInsensitiveContains(selectedMeal)
         }
         print(selectedMeal)
+    }
+    
+    @ViewBuilder
+    func foodFilter() -> some View {
+        if(selectedMeal == "All"){
+            ListView(foods: filteredRecipes)
+        } else {
+            FilterView(foods: filteredRecipes, filter: selectedMeal)
+        }
     }
     
     

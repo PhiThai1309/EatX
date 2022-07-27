@@ -18,8 +18,14 @@ struct Food: Identifiable, Codable, Hashable {
     var mainImage: String {
         name.replacingOccurrences(of: " ", with: "-").lowercased()
     }
+    
+    var secondImage: String{
+        name.replacingOccurrences(of: " ", with: "-").lowercased() + "-2"
+    }
 
     var thumbnailImage: String {
         "\(mainImage)-thumb"
     }
 }
+
+var foods = decodeJsonFromJsonFile(jsonFileName: "menu.json")
