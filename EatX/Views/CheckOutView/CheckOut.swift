@@ -10,6 +10,7 @@
  Acknowledgement:
  1.https://www.simpleswiftguide.com/how-to-present-new-sheet-view-from-navigationbaritems-button-in-swiftui/
  2.https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
+ 3.https://www.hackingwithswift.com/quick-start/swiftui/how-to-prevent-a-sheet-from-being-dismissed-with-a-swipe
  */
 
 import Foundation

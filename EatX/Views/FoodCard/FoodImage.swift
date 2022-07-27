@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FoodImage: View{
     var food: Food
+    var height: GeometryProxy
     
     var body: some View{
         GeometryReader {
@@ -19,15 +20,16 @@ struct FoodImage: View{
                     Image(food.mainImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: geo.size.width ,height: 400, alignment: .center)
+                        .frame(width: geo.size.width ,height: height.size.height * 0.5, alignment: .center)
                         .clipped()
                     Image(food.secondImage)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: geo.size.width ,height: 400, alignment: .center)
+                        .frame(width: geo.size.width ,height: height.size.height * 0.5, alignment: .center)
                         .clipped()
                 }
             }
         }
+        .frame(height: height.size.height * 0.5)
     }
 }

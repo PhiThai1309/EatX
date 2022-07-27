@@ -14,44 +14,47 @@ struct FoodCard: View {
     @Binding var totalPrice: Float
     
     var body: some View {
-        VStack() {
-            FoodImage(food: food)
-            ScrollView{
-                VStack(alignment: .leading) {
-                    FoodCardHeader(food: food)
-                    FoodCardIntroduction(food: food)
-                    FoodCardPrice(food: food)
+        GeometryReader{
+            mainGeo in
+            VStack() {
+                FoodImage(food: food, height: mainGeo)
+                ScrollView{
+                    VStack(alignment: .leading) {
+                        FoodCardHeader(food: food)
+                        FoodCardIntroduction(food: food)
+                        FoodCardPrice(food: food)
+                    }
+                    .padding()
+                    Spacer()
                 }
-                .padding()
-                Spacer()
-            }
-            //            ZStack {
-            //                .position(x: .infinity, y: 200)
-            //                    .frame(height: 100)
-            //            }
-            GeometryReader{
-                geometry in
-                Button{
-                    //                cartItems.add(item: food)
-                    //                print(cartItems.items[0])
-                    orderList.append(food)
-                    totalPrice = totalPrice + food.price
-                } label: {
-                    Label("Add to cart", systemImage: "cart.badge.plus")
+                //            ZStack {
+                //                .position(x: .infinity, y: 200)
+                //                    .frame(height: 100)
+                //            }
+                GeometryReader{
+                    geometry in
+                    Button{
+                        //                cartItems.add(item: food)
+                        //                print(cartItems.items[0])
+                        orderList.append(food)
+                        totalPrice = totalPrice + food.price
+                    } label: {
+                        Label("Add to cart", systemImage: "cart.badge.plus")
+                    }
+                    .frame(width: 250)
+                    .padding()
+                    .background(.orange)
+                    .clipShape(Capsule())
+                    .foregroundColor(.white)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
                 }
-                .frame(width: 250)
-                .padding()
-                .background(.orange)
-                .clipShape(Capsule())
-                .foregroundColor(.white)
-                .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
+                .frame(height: 100)
             }
-            .frame(height: 100)
+            .ignoresSafeArea()
+            .accentColor(.blue)
+            
         }
-        .ignoresSafeArea()
-        .accentColor(.blue)
-        
-    }
+        }
 }
 
 struct FoodCard_Previews: PreviewProvider {

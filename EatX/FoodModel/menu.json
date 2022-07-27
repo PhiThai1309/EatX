@@ -1,10 +1,12 @@
+
+
 [
     {
         "id": 1,
         "name": "Maple French Toast",
         "meal": "Breakfast",
         "price": 6,
-        "description": "Sweet, fluffy, and served piping hot, our French toast is flown in fresh every day from Maple City, Canada, which is where all maple syrup in the world comes from. And if you believe that, we have some land to sell you…"
+        "description": "Sourdough bread dipped in a rich egg batter, served golden brown, lightly dusted with powdered sugar and served with whipped butter and hot syrup. Sourdough bread dipped in a rich egg batter, served golden brown, with sliced toasted almonds and dusted withcinnamon sugar."
     },
     {
         "id": 2,
@@ -18,28 +20,28 @@
         "name": "Stack-o-Pancakes",
         "meal": "Breakfast",
         "price": 10,
-        "description": "What do you get? Pancakes! How many do you get? One metric stack! That's equivalent to 1000 millistacks, or a tenth of a kilostack. In short, you get a lot of pancakes."
+        "description": "Freshly cooked, scratch-made pancakes served with two eggs and your choice two bacon strips or two jumbo sausage links."
     },
     {
         "id": 4,
         "name": "Strawberry Surprise",
         "meal": "Dessert",
         "price": 6,
-        "description": "Bob, people keep asking us why this thing has D and V for its restrictions, and it's making other customers worry that we are some sort of D&V hotspot. [NOTE FOR BOB: Can we find another word for dairy intolerance?]"
+        "description": "A smoothie recipe made with fresh strawberries combined with cranberry juice and buttermilk for a easy breakfast option for you or your kids."
     },
     {
         "id": 5,
         "name": "Porridge Deluxe",
         "meal": "Breakfast",
         "price": 4,
-        "description": "This is literally just porridge. Bob, where did you get this picture? Our porridge looks nothing like this. No porridge does – who the heck has the time to make porridge like this? [NOTE FOR BOB: Replace this with actual marketing text]"
+        "description": "A reliable porridge recipe is a must-have for an easy and satisfying breakfast Mix things up with the porridge toppings and use your favourite fruits & nuts."
     },
     {
         "id": 6,
         "name": "Mushroom Tagliatelle",
         "meal": "Mains",
         "price": 12,
-        "description": "If you're the kind of fun guy (sorry not sorry) that likes salami-filled Italian food with a twist, this is the perfect dish for you. The twist? We lied about the meat."
+        "description": "This is a super simple creamy mushroom tagliatelle recipe that you will make over and over again. A garlicky creamy mushroom sauce tossed with silky noodles and finished with a squeeze of lemon and a sprinkle of parsley."
     },
     {
         "id": 7,
@@ -62,4 +64,18 @@
         "price": 8,
         "description": "For times when one, two, or even three macarons aren't enough, we're proud to present macarons galore – four macarons, to fully satisfy your craving for these sweet almondy delights!"
     },
+    {
+        "id": 10,
+        "name": "Powerhouse coffee",
+        "meal": "Drinks",
+        "price": 3,
+        "description": "In the same way that brandy is distilled wine, this is distilled coffee. Yes, we literally boil coffee again and again to remove as much water as possible, leaving some black goopy stuff that is pretty much guaranteed to make your eyes pop."
+    },
+    {
+        "id": 11,
+        "name": "Singapore sling",
+        "meal": "Drinks",
+        "price": 10,
+        "description": "The drink is a leggy, vibrant-pink damsel with a fruity taste and a mid-summer vibe. Garnish with just a cherry for that high-society vibe, or tone down the fancy-pants look with a cocktail umbrella and a sparkly straw."
+    }
 ]
