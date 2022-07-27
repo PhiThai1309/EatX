@@ -50,8 +50,10 @@ struct FoodCardIntroduction: View {
     }
     
     struct FoodCardIntroduction_Previews: PreviewProvider {
+        @State static var orderList = [Food]()
+        @State static var price:Float = 5
         static var previews: some View {
-            FoodCard(food: foods[3])
+            FoodCard(food: foods[3], orderList: $orderList, totalPrice: $price)
                 .previewDevice("iPhone 11")
         }
     }

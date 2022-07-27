@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FoodCard: View {
     var food: Food
+    @Binding var orderList: [Food]
+    @Binding var totalPrice: Float
     
     var body: some View {
         VStack() {
@@ -32,6 +34,8 @@ struct FoodCard: View {
                 Button{
                     //                cartItems.add(item: food)
                     //                print(cartItems.items[0])
+                    orderList.append(food)
+                    totalPrice = totalPrice + food.price
                 } label: {
                     Label("Add to cart", systemImage: "cart.badge.plus")
                 }
@@ -51,8 +55,10 @@ struct FoodCard: View {
 }
 
 struct FoodCard_Previews: PreviewProvider {
+    @State static var orderList = [Food]()
+    @State static var price:Float = 5.0
     static var previews: some View {
-        FoodCard(food: foods[3])
+        FoodCard(food: foods[3], orderList: $orderList, totalPrice: $price)
             .previewDevice("iPhone 11")
     }
 }

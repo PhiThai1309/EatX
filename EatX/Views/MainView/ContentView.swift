@@ -3,9 +3,9 @@
  Course: COSC2659 iOS Development
  Semester: 2022B
  Assessment: Assignment 2
- Author: Your name (e.g. Nguyen Van Minh)
- ID: Your student id (e.g. 1234567)
- Created  date: dd/mm/yyyy (e.g. 31/07/2022)
+ Author: Thai Manh Phi
+ ID: s3878070
+ Created  date: 27/07/2022
  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
  Acknowledgement:
  1. https://swiftwithmajid.com/2020/08/05/menus-in-swiftui/
@@ -21,6 +21,8 @@ struct ContentView: View {
     @State private var selectedMeal = "All"
     @State var searchQuery = ""
     @State var filteredRecipes = foods
+    @State var orderList:[Food] = []
+    @State var totalPrice:Float = 0
     
     
     var body: some View {
@@ -41,12 +43,7 @@ struct ContentView: View {
                             Menu {
                                 Picker(selection: $selectedMeal, label: Text("Sorting options")) {
                                     ForEach(MealType, id: \.self){
-                                        Button($0, action: {
-                                            filteredRecipes = foods.filter {
-                                                $0.meal
-                                                    .localizedCaseInsensitiveContains(selectedMeal)
-                                            }
-                                        })
+                                        Button($0, action: {})
                                     }
                                 }
                             } label: {
@@ -56,8 +53,6 @@ struct ContentView: View {
                     }
                 GeometryReader{
                     geometry in
-//                    NavigationLink(destination: CheckOut(), isActive: $isShowingDetailView) {}
-                    
                     Button(){
                         isShowingDetailView.toggle()
                     } label: {
@@ -65,7 +60,7 @@ struct ContentView: View {
                             .font(.system(size: 20, weight: .regular))
                             .foregroundColor(.white)
                     } .sheet(isPresented: $isShowingDetailView){
-                        CheckOut()
+                        CheckOut(showSheetView: $isShowingDetailView, orderList: $orderList, totalPrice: $totalPrice)
                     }
                     .frame(width: 30, height: 30)
                     .padding()
@@ -103,16 +98,16 @@ struct ContentView: View {
     @ViewBuilder
     func foodFilter() -> some View {
         if(selectedMeal == "All"){
-            ListView(foods: filteredRecipes)
+            ListView(foods: filteredRecipes, orderList: $orderList, totalPrice: $totalPrice)
         } else {
-            FilterView(foods: filteredRecipes, filter: selectedMeal)
+            FilterView(foods: filteredRecipes, filter: selectedMeal, orderList: $orderList, totalPrice: $totalPrice)
         }
     }
     
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            ContentView(orderList: [], totalPrice: 5)
             
         }
     }
