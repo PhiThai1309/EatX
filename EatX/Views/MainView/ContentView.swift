@@ -83,7 +83,6 @@ struct ContentView: View {
             }
             .ignoresSafeArea(.container, edges: .bottom)
         }
-        .accentColor(.black)
     }
     func searchRecipes() {
         if searchQuery.isEmpty {
