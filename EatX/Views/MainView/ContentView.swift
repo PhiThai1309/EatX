@@ -11,7 +11,7 @@
  1. https://swiftwithmajid.com/2020/08/05/menus-in-swiftui/
  2. https://www.raywenderlich.com/26924502-swiftui-search-getting-started
  3. https://swiftontap.com/toolbaritem
- 4.
+ 4.https://stackoverflow.com/questions/63968344/swiftui-how-to-show-an-alert-after-a-sheet-is-closed
  */
 
 import SwiftUI
@@ -23,6 +23,10 @@ struct ContentView: View {
     @State var filteredRecipes = foods
     @State var orderList:[Food] = []
     @State var totalPrice:Float = 0
+    
+    
+    @State var showAlert = false
+    @State var closeSheetWithAlert = false
     
     
     var body: some View {
@@ -59,8 +63,15 @@ struct ContentView: View {
                         Image(systemName: "cart")
                             .font(.system(size: 20, weight: .regular))
                             .foregroundColor(.white)
-                    } .sheet(isPresented: $isShowingDetailView){
-                        CheckOut(showSheetView: $isShowingDetailView, orderList: $orderList, totalPrice: $totalPrice)
+                    } .sheet(isPresented: $isShowingDetailView, onDismiss: {
+                        showAlert = closeSheetWithAlert
+                    }){
+                        CheckOut(showSheetView: $isShowingDetailView, orderList: $orderList, totalPrice: $totalPrice, closeSheetWithAlert: $closeSheetWithAlert)
+                        
+                    }
+                    .alert(isPresented: $showAlert) {
+                        closeSheetWithAlert = false
+                        return Alert(title: Text("Your order have been confirmed!"), message: Text("We hope you like our services"))
                     }
                     .frame(width: 30, height: 30)
                     .padding()
@@ -74,7 +85,6 @@ struct ContentView: View {
         }
         .accentColor(.black)
     }
-    
     func searchRecipes() {
         if searchQuery.isEmpty {
             // 1

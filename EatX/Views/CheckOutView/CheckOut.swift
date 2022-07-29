@@ -11,6 +11,8 @@
  1.https://www.simpleswiftguide.com/how-to-present-new-sheet-view-from-navigationbaritems-button-in-swiftui/
  2.https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
  3.https://www.hackingwithswift.com/quick-start/swiftui/how-to-prevent-a-sheet-from-being-dismissed-with-a-swipe
+ 4.https://www.appcoda.com/swiftui-toolbar/
+ 5.https://developer.apple.com/documentation/swiftui/view/navigationbaritems(leading:trailing:)
  */
 
 import Foundation
@@ -20,6 +22,8 @@ struct CheckOut: View {
     @Binding var showSheetView: Bool
     @Binding var orderList: [Food]
     @Binding var totalPrice: Float
+    
+    @Binding var closeSheetWithAlert:Bool
     
     var body: some View {
         NavigationView{
@@ -44,7 +48,7 @@ struct CheckOut: View {
                         .font(.title2)
                         .fontWeight(.semibold)
                         .padding(.bottom, 5)
-                    Text("Your order has been confirmed!")
+                    Text("Click Order to comfirm")
                         .font(.headline)
                         .fontWeight(.light)
                     Text(totalPrice, format: .currency(code: Locale.current.currencyCode ?? "USD"))
@@ -52,7 +56,7 @@ struct CheckOut: View {
                         .fontWeight(.bold)
                         .padding(.vertical)
                     Spacer()
-                    Text("Order summary: ")
+                    Text("Cart summary: ")
                         .font(.title3)
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -69,17 +73,30 @@ struct CheckOut: View {
                     }
                     .padding(5)
                     Spacer()
+                    Button(action: {
+                        showSheetView = false
+                        totalPrice = 0
+                        orderList.removeAll()
+                        if(orderList.isEmpty){
+                            closeSheetWithAlert = true
+                        }
+                    }){
+                        Label("Confirm order!", systemImage: "cart")
+                    }
+                    .frame(width: 250)
+                    .padding()
+                    .background(.orange)
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
+                    .disabled(orderList.isEmpty)
                 }
             }
             .navigationBarItems(trailing: Button(action: {
-                self.showSheetView = false
-                orderList.removeAll()
-                totalPrice = 0
+                showSheetView = false
             }) {
-                Text("Done").bold()
+                Text("Dismiss").bold().foregroundColor(.red)
             })
         }
-        .interactiveDismissDisabled()
     }
 }
 
@@ -88,6 +105,6 @@ struct CheckOut_Previews: PreviewProvider {
     @State static var show = false
     @State static var price:Float = 5
     static var previews: some View {
-        CheckOut(showSheetView: $show, orderList: $orderList, totalPrice: $price)
+        CheckOut(showSheetView: $show, orderList: $orderList, totalPrice: $price, closeSheetWithAlert: $show)
     }
 }
