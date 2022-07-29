@@ -94,6 +94,7 @@
 				3465ADD9288FC07F00A670CE /* MainView */,
 				3465ADD1288F7C0000A670CE /* FoodCardView */,
 				3465ADE62890422F00A670CE /* CheckOutView */,
+				3465ADD0288F7BD900A670CE /* FoodModel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				3465ADD2288F7C0E00A670CE /* Views */,
-				3465ADD0288F7BD900A670CE /* FoodModel */,
 				34DAEEC52886A51A00CE1A45 /* Assets.xcassets */,
 				34DAEEC72886A51A00CE1A45 /* Preview Content */,
 			);

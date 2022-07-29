@@ -5,8 +5,8 @@
  Assessment: Assignment 2
  Author: Thai Manh Phi
  ID: s3878070
- Created  date: 27/07/2022
- Last modified: dd/mm/yyyy (e.g. 05/08/2022)
+ Created  date: 19/07/2022
+ Last modified: 29/07/2022
  Acknowledgement:
  1. https://swiftwithmajid.com/2020/08/05/menus-in-swiftui/
  2. https://www.raywenderlich.com/26924502-swiftui-search-getting-started

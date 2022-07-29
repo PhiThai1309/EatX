@@ -5,8 +5,8 @@
  Assessment: Assignment 2
  Author: Thai Manh Phi
  ID: s3878070
- Created  date: 27/07/2022
- Last modified: dd/mm/yyyy (e.g. 05/08/2022)
+ Created  date: 26/07/2022
+ Last modified: 29/07/2022
  Acknowledgement:
  1.https://www.simpleswiftguide.com/how-to-present-new-sheet-view-from-navigationbaritems-button-in-swiftui/
  2.https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself

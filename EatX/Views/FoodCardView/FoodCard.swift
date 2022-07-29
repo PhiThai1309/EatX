@@ -1,9 +1,14 @@
-//
-//  FoodCard.swift
-//  EatX
-//
-//  Created by Phi Thai on 19/07/2022.
-//
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Thai Manh Phi
+ ID: s3878070
+ Created  date: 19/07/2022
+ Last modified: 29/07/2022
+ Acknowledgement:
+ */
 
 import Foundation
 import SwiftUI
