@@ -81,7 +81,7 @@ struct CheckOut: View {
                             closeSheetWithAlert = true
                         }
                     }){
-                        Label("Confirm order!", systemImage: "cart")
+                        Label("Confirm order!", systemImage: "checkmark")
                     }
                     .frame(width: 250)
                     .padding()
@@ -90,6 +90,7 @@ struct CheckOut: View {
                     .clipShape(Capsule())
                     .disabled(orderList.isEmpty)
                 }
+                Spacer()
             }
             .navigationBarItems(trailing: Button(action: {
                 showSheetView = false

@@ -12,6 +12,7 @@ struct FoodCard: View {
     var food: Food
     @Binding var orderList: [Food]
     @Binding var totalPrice: Float
+    @State var showAlert = false
     
     var body: some View {
         GeometryReader{
@@ -38,8 +39,12 @@ struct FoodCard: View {
                         //                print(cartItems.items[0])
                         orderList.append(food)
                         totalPrice = totalPrice + food.price
+                        showAlert = true
                     } label: {
                         Label("Add to cart", systemImage: "cart.badge.plus")
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Add to card successfully"))
                     }
                     .frame(width: 250)
                     .padding()
