@@ -53,9 +53,9 @@ struct FoodCard: View {
                     .foregroundColor(.white)
                     .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.4)
                 }
-                .frame(height: 100)
+                .frame(height: 60)
             }
-            .ignoresSafeArea()
+            .ignoresSafeArea(.container, edges: .top)
             .accentColor(.blue)
             
         }

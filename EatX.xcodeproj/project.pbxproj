@@ -74,7 +74,7 @@
 			path = FoodModel;
 			sourceTree = "<group>";
 		};
-		3465ADD1288F7C0000A670CE /* FoodCard */ = {
+		3465ADD1288F7C0000A670CE /* FoodCardView */ = {
 			isa = PBXGroup;
 			children = (
 				34DAEED32886A79900CE1A45 /* FoodCard.swift */,
@@ -83,7 +83,7 @@
 				3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */,
 				3465ADE428903B6100A670CE /* FoodImage.swift */,
 			);
-			path = FoodCard;
+			path = FoodCardView;
 			sourceTree = "<group>";
 		};
 		3465ADD2288F7C0E00A670CE /* Views */ = {
@@ -92,7 +92,7 @@
 				342F5EEF2890E81700F81BD0 /* Elements */,
 				34DAEEC12886A51900CE1A45 /* EatXApp.swift */,
 				3465ADD9288FC07F00A670CE /* MainView */,
-				3465ADD1288F7C0000A670CE /* FoodCard */,
+				3465ADD1288F7C0000A670CE /* FoodCardView */,
 				3465ADE62890422F00A670CE /* CheckOutView */,
 			);
 			path = Views;
