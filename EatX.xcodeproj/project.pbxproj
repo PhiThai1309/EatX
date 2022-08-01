@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343B1BDC2897913B009A1AD7 /* SearchDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B1BDB2897913B009A1AD7 /* SearchDishes.swift */; };
+		343B1BE228979535009A1AD7 /* EmptyCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B1BE128979535009A1AD7 /* EmptyCart.swift */; };
+		343B1BE428979565009A1AD7 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B1BE328979565009A1AD7 /* CartView.swift */; };
+		343B1BE62897D188009A1AD7 /* document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 343B1BE52897D188009A1AD7 /* document.pdf */; };
 		3465ADCF288F7B4000A670CE /* FoodCardIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */; };
 		3465ADD4288F7C6F00A670CE /* FoodCardPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */; };
 		3465ADD6288F7CCB00A670CE /* FoodCardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343B1BDB2897913B009A1AD7 /* SearchDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDishes.swift; sourceTree = "<group>"; };
+		343B1BE128979535009A1AD7 /* EmptyCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCart.swift; sourceTree = "<group>"; };
+		343B1BE328979565009A1AD7 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		343B1BE52897D188009A1AD7 /* document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = document.pdf; sourceTree = "<group>"; };
 		3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardIntroduction.swift; sourceTree = "<group>"; };
 		3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardPrice.swift; sourceTree = "<group>"; };
 		3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardHeader.swift; sourceTree = "<group>"; };
@@ -56,11 +64,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		342F5EEF2890E81700F81BD0 /* Elements */ = {
+		342F5EEF2890E81700F81BD0 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				343B1BDB2897913B009A1AD7 /* SearchDishes.swift */,
 			);
-			path = Elements;
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		3465ADD0288F7BD900A670CE /* FoodModel */ = {
@@ -78,10 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				34DAEED32886A79900CE1A45 /* FoodCard.swift */,
+				3465ADE428903B6100A670CE /* FoodImage.swift */,
 				3465ADCE288F7B4000A670CE /* FoodCardIntroduction.swift */,
 				3465ADD3288F7C6F00A670CE /* FoodCardPrice.swift */,
 				3465ADD5288F7CCB00A670CE /* FoodCardHeader.swift */,
-				3465ADE428903B6100A670CE /* FoodImage.swift */,
 			);
 			path = FoodCardView;
 			sourceTree = "<group>";
@@ -89,8 +98,8 @@
 		3465ADD2288F7C0E00A670CE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				342F5EEF2890E81700F81BD0 /* Elements */,
 				34DAEEC12886A51900CE1A45 /* EatXApp.swift */,
+				342F5EEF2890E81700F81BD0 /* Functions */,
 				3465ADD9288FC07F00A670CE /* MainView */,
 				3465ADD1288F7C0000A670CE /* FoodCardView */,
 				3465ADE62890422F00A670CE /* CheckOutView */,
@@ -113,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				3465ADE72890425400A670CE /* CheckOut.swift */,
+				343B1BE128979535009A1AD7 /* EmptyCart.swift */,
+				343B1BE328979565009A1AD7 /* CartView.swift */,
 			);
 			path = CheckOutView;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			children = (
 				3465ADD2288F7C0E00A670CE /* Views */,
 				34DAEEC52886A51A00CE1A45 /* Assets.xcassets */,
+				343B1BE52897D188009A1AD7 /* document.pdf */,
 				34DAEEC72886A51A00CE1A45 /* Preview Content */,
 			);
 			path = EatX;
@@ -212,6 +224,7 @@
 				3465ADDF288FF18900A670CE /* menu.json in Resources */,
 				34DAEEC92886A51A00CE1A45 /* Preview Assets.xcassets in Resources */,
 				34DAEEC62886A51A00CE1A45 /* Assets.xcassets in Resources */,
+				343B1BE62897D188009A1AD7 /* document.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,11 +242,14 @@
 				34DAEED42886A79900CE1A45 /* FoodCard.swift in Sources */,
 				3465ADD4288F7C6F00A670CE /* FoodCardPrice.swift in Sources */,
 				3465ADE1288FF1AD00A670CE /* FileReader.swift in Sources */,
+				343B1BDC2897913B009A1AD7 /* SearchDishes.swift in Sources */,
+				343B1BE228979535009A1AD7 /* EmptyCart.swift in Sources */,
 				3465ADCF288F7B4000A670CE /* FoodCardIntroduction.swift in Sources */,
 				34DAEED62886C97E00CE1A45 /* MealIcon.swift in Sources */,
 				3465ADD6288F7CCB00A670CE /* FoodCardHeader.swift in Sources */,
 				3465ADE82890425400A670CE /* CheckOut.swift in Sources */,
 				34DAEEC22886A51900CE1A45 /* EatXApp.swift in Sources */,
+				343B1BE428979565009A1AD7 /* CartView.swift in Sources */,
 				34DAEED02886A5F100CE1A45 /* FoodModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

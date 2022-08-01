@@ -6,13 +6,14 @@
  Author: Thai Manh Phi
  ID: s3878070
  Created  date: 19/07/2022
- Last modified: 29/07/2022
+ Last modified: 1/08/2022
  Acknowledgement:
  */
 
 import Foundation
 import SwiftUI
 
+//Food model
 struct Food: Identifiable, Codable, Hashable {
     var id: Int
     var name: String
@@ -33,4 +34,5 @@ struct Food: Identifiable, Codable, Hashable {
     }
 }
 
-var foods = decodeJsonFromJsonFile(jsonFileName: "menu.json")
+//Import food into an array from JSON file
+var foods = decodeJsonFile(fileName: "menu.json")

@@ -6,7 +6,7 @@
  Author: Thai Manh Phi
  ID: s3878070
  Created  date: 26/07/2022
- Last modified: 29/07/2022
+ Last modified: 1/08/2022
  Acknowledgement:
  */
 
@@ -15,26 +15,26 @@ import SwiftUI
 
 struct FoodImage: View{
     var food: Food
-    var height: GeometryProxy
+    var screen: GeometryProxy
     
     var body: some View{
-        GeometryReader {
-            geo in
-            ScrollView(.horizontal){
-                HStack{
-                    Image(food.mainImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: geo.size.width ,height: height.size.height * 0.5, alignment: .center)
-                        .clipped()
-                    Image(food.secondImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: geo.size.width ,height: height.size.height * 0.5, alignment: .center)
-                        .clipped()
-                }
+        //ScrollView for the image
+        ScrollView(.horizontal){
+            //Display the image horizontally, the image will take the width and the size of the parent view
+            HStack{
+                Image(food.mainImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: screen.size.width ,height: screen.size.height * 0.5, alignment: .center)
+                    //Crop the image that is oversize
+                    .clipped()
+                Image(food.secondImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: screen.size.width ,height: screen.size.height * 0.5, alignment: .center)
+                    //Crop the image that is oversize
+                    .clipped()
             }
         }
-        .frame(height: height.size.height * 0.5)
     }
 }

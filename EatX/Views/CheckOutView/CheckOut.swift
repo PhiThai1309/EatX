@@ -6,7 +6,7 @@
  Author: Thai Manh Phi
  ID: s3878070
  Created  date: 26/07/2022
- Last modified: 29/07/2022
+ Last modified: 1/08/2022
  Acknowledgement:
  1.https://www.simpleswiftguide.com/how-to-present-new-sheet-view-from-navigationbaritems-button-in-swiftui/
  2.https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-view-dismiss-itself
@@ -18,6 +18,7 @@
 import Foundation
 import SwiftUI
 
+//This is the view for the cart summary
 struct CheckOut: View {
     @Binding var showSheetView: Bool
     @Binding var orderList: [Food]
@@ -28,51 +29,14 @@ struct CheckOut: View {
     var body: some View {
         NavigationView{
             VStack() {
+                //If the cart is empty, show the empty cart view
                 if(totalPrice == 0) {
-                    Image(systemName: "cart.badge.minus")
-                        .font(.system(size: 50, weight: .bold))
-                        .foregroundColor(Color.gray)
-                    Text("Your cart is empty")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 5)
-                        .foregroundColor(Color.gray)
-                    Text("Please select a food to proceed")
-                        .font(.title3)
-                        .fontWeight(.light)
-                        .padding(.vertical, 100)
-                        .foregroundColor(Color.gray)
-                    Spacer()
+                    EmptyCart()
                 } else {
-                    Text("Thank you for using EatX")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.bottom, 5)
-                    Text("Click Order to comfirm")
-                        .font(.headline)
-                        .fontWeight(.light)
-                    Text(totalPrice, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.vertical)
+                    //If not then preview a cart view
+                    CartView(totalPrice: totalPrice, orderList: orderList)
                     Spacer()
-                    Text("Cart summary: ")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.top, 50)
-                        .padding([.leading], 20)
-                    ScrollView{
-                        ForEach(orderList){
-                            order in
-                            Text(order.name)
-                                .padding(5)
-                            Divider()
-                                .padding(.horizontal, 20)
-                        }
-                    }
-                    .padding(5)
-                    Spacer()
+                    //Add "Confirm order!" button
                     Button(action: {
                         showSheetView = false
                         totalPrice = 0
@@ -92,6 +56,7 @@ struct CheckOut: View {
                 }
                 Spacer()
             }
+            //Add "Dismiss" button on top of the sheet view
             .navigationBarItems(trailing: Button(action: {
                 showSheetView = false
             }) {
@@ -99,13 +64,15 @@ struct CheckOut: View {
             })
         }
     }
-}
-
-struct CheckOut_Previews: PreviewProvider {
-    @State static var orderList = [Food]()
-    @State static var show = false
-    @State static var price:Float = 5
-    static var previews: some View {
-        CheckOut(showSheetView: $show, orderList: $orderList, totalPrice: $price, closeSheetWithAlert: $show)
+    //Show preview in Xcode
+    struct CheckOut_Previews: PreviewProvider {
+        @State static var orderList = [Food]()
+        @State static var show = false
+        @State static var price:Float = 5
+        static var previews: some View {
+            CheckOut(showSheetView: $show, orderList: $orderList, totalPrice: $price, closeSheetWithAlert: $show)
+        }
     }
 }
+
+

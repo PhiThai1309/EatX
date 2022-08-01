@@ -6,13 +6,14 @@
  Author: Thai Manh Phi
  ID: s3878070
  Created  date: 26/07/2022
- Last modified: 29/07/2022
+ Last modified: 1/08/2022
  Acknowledgement:
  */
 
 import Foundation
 import SwiftUI
 
+//This is the view for the Card header
 struct FoodCardHeader: View {
     var food: Food
     
@@ -22,6 +23,7 @@ struct FoodCardHeader: View {
             .fontWeight(.heavy)
         Spacer(minLength: 10)
         HStack{
+            //Call MealIcon function
             MealIcon(meal: food.meal)
             Text(food.meal)
         }.padding(.bottom, 10)

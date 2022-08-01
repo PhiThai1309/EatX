@@ -15,6 +15,7 @@ import SwiftUI
 
 var MealType = ["All", "Breakfast", "Dessert", "Mains", "Drinks"]
 
+//Convert string into substitude string
 struct MealIcon: View {
     var meal: String
     

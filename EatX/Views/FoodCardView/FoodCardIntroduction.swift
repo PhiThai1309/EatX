@@ -6,13 +6,14 @@
  Author: Thai Manh Phi
  ID: s3878070
  Created  date: 26/07/2022
- Last modified: 29/07/2022
+ Last modified: 1/08/2022
  Acknowledgement:
  */
 
 import Foundation
 import SwiftUI
 
+//This is the view for food introduction
 struct FoodCardIntroduction: View {
     @State var expandable = false
     var food: Food
@@ -25,17 +26,19 @@ struct FoodCardIntroduction: View {
             .padding(.top, 20)
             .padding(.bottom, 5)
         
-        VStack{
-            if(!expandable) {
-                Text(food.description)
-                    .lineLimit(1)
-            } else {
-                Text(food.description)
-            }
+        //if the button is not pressed, the text is collapse into 1 line
+        if(!expandable) {
+            Text(food.description)
+                .lineLimit(1)
+        } else {
+            //if the button is pressed, the text is expanded
+            Text(food.description)
         }
         Spacer()
+        //HStack to push the button to the right corner
         HStack{
             Spacer()
+            //This button will toggle the expandable text betwen collapse and extend
             if(expandable) {
                 Button("less..."){
                     expandable.toggle()
@@ -45,13 +48,10 @@ struct FoodCardIntroduction: View {
                     expandable.toggle()
                 }
             }
-            
         }
-        .listRowSeparator(.hidden)
-        //                    Text(food.description)
-        .font(.body)
     }
     
+    //Show preview in Xcode
     struct FoodCardIntroduction_Previews: PreviewProvider {
         @State static var orderList = [Food]()
         @State static var price:Float = 5
