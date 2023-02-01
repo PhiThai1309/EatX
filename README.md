@@ -125,10 +125,25 @@ Additionally, a list view of the home page can be redesigned to have a more mode
 
 ## Acknowledgments
 Details in code files
+
+<p>
 [1]“W5 - What’s happening this week?: iOS Development.” https://rmit.instructure.com/courses/104891/pages/w5-whats-happening-this-week?module_item_id=4179466 (accessed Jul. 30, 2022).
+</p>
+<p>
 [2]“Creamy Mushroom Tagliatelle - Savvy Bites.” https://savvybites.co.uk/creamy-mushroom-tagliatelle/ (accessed Jul. 30, 2022).
+</p>
+<p>
 [3]“The Original Pancake House: Menu - French Toast.” https://www.originalpancakehousecleveland.com/french_toast.html (accessed Jul. 30, 2022).
+</p>
+<p>
 [4]“Strawberry Surprise - Recipe from Price Chopper.” https://www.mypricechopper.com/fresh-dish/recipes/recipe?id=7991 (accessed Jul. 30, 2022).
+</p>
+<p>
 [5]“Porridge recipe | Jamie Oliver breakfast & brunch recipes.” https://www.jamieoliver.com/recipes/fruit-recipes/porridge-lots-of-ways/ (accessed Jul. 30, 2022).
+</p>
+<p>
 [6]“SwiftUI-iDine/menu.json at master · pd95/SwiftUI-iDine.” https://github.com/pd95/SwiftUI-iDine/blob/master/iDine/menu.json (accessed Jul. 30, 2022).
+</p>
+<p>
 [7]“MockUPhone.” https://mockuphone.com/device?type=ios#iphone13 (accessed Jul. 30, 2022).
+</p>
