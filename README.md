@@ -94,8 +94,8 @@ EatX application have native support for Apple Dark mode. User can switch betwee
 
  <img width="411" alt="image" src="https://user-images.githubusercontent.com/71892904/182124231-759818cb-abe8-47cd-987c-7475badf853c.png">
 </p>
-### Built with
 
+### Built with
 <p align="center">
   <img src="https://skillicons.dev/icons?i=swift" />
   <img src="https://skillicons.dev/icons?i=figma">
