@@ -101,13 +101,10 @@ EatX application have native support for Apple Dark mode. User can switch betwee
   <img src="https://skillicons.dev/icons?i=figma">
 </p>
 
-- Android Studio is the official IDE is used to develop our android application.
-- Firebase
+- Swift, SwiftUI
+- XCode
 - Github & Git
-- Google Map API
 - Figma
-- Material Design Framework
-- Microsoft Visio
 
 ### What our team learned
 Through this project, our team has learned how to build a multi-functional Android application that consists of many features including Google Map API, Google Firestore, chat feature, and many more. Most and foremost, we have learned how to work as a teammate, collaborate using GitHub and Git, and handle conflict if there is a merge issue. Although this project only lasts for 1 month, we have accomplished many things as a team and as a result, we are proud to deliver Best House application.
