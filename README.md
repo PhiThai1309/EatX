@@ -39,7 +39,7 @@ Introducing EatX, an application that is designed for restaurants to replace tra
 - Github & Git
 - Figma
 
-### Functionalities
+## Functionalities
 
 #### Tap to expand
 <p align="center">
