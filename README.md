@@ -17,8 +17,8 @@ Lecturer: Mr. Tom Huynh
 - [Overview](#overview)
 - [Functionalities](#Functionalities)
 - [Built with](#built-with)
-- [What our team learned](#what-our-team-learned)
-- [Continued development](#continued-development)
+- [Future development](#Future development)
+- [Application demo](#Application demo)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -105,9 +105,6 @@ EatX application have native support for Apple Dark mode. User can switch betwee
 - XCode
 - Github & Git
 - Figma
-
-### What our team learned
-Through this project, our team has learned how to build a multi-functional Android application that consists of many features including Google Map API, Google Firestore, chat feature, and many more. Most and foremost, we have learned how to work as a teammate, collaborate using GitHub and Git, and handle conflict if there is a merge issue. Although this project only lasts for 1 month, we have accomplished many things as a team and as a result, we are proud to deliver Best House application.
 
 ### Future development
 Due to limited development time, many features will be pushed into the future development of the application. One of the main features that will be developed in the future is the ability to add the quantity of the. This means that there will be a counter asking how many amounts of the dish the user wishes to add to the card. Moreover, in addition to quantity, the cart summary will show the list of food by a group. Each food if they are in the cart as a single quantity will have the indication next to the name as “x1” and so on. This will create more friendliness towards the user end since the user does not need to manually calculate the total amount of the same dish.
