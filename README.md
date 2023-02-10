@@ -71,7 +71,7 @@ The search bar will be above the list and hidden by default. Users need to scrol
  
 </p>
 
-#### Filter food list
+### Filter food list
 
 <p align="center">
 <img width="222" alt="image" src="https://user-images.githubusercontent.com/71892904/182123757-76030592-7f4d-4a0f-adca-0ff9c68aeb25.png">
@@ -79,7 +79,7 @@ The search bar will be above the list and hidden by default. Users need to scrol
 To bring more convenience to the user experience. Users can now filter the list by the food type such as Breakfast, dessert, and more. By clicking on a type, the list will change dynamically and show only the result of the food-related to that type.
 Moreover, users can use filters alongside with search to find a food with a specific type bringing more usability to the application.
 
-#### Check out
+### Check out
 
 <p align="center">
  <img width="222" alt="image" src="https://user-images.githubusercontent.com/71892904/182123808-fdb5a6d9-ad2c-4d10-8fda-a3c276382f2e.png"> 
@@ -90,7 +90,7 @@ Moreover, users can use filters alongside with search to find a food with a spec
 Extended with the add-to-card function, the application will present the user with a summary of their cart. While reviewing, if users want to add more items to the card, they can do so by swiping down to dismiss the pop-up view or clicking on the “dismiss” button. This function will temporarily close the popup view and not proceed to order the user food’s card.  By only clicking on the “Confirm order!” button, the application will create an order and clear out the cart for the user.
 This interface will check for the user cart. If there is no item in the user cart, the application will show this screen to the user prompting them with the information “Your cart is empty”.
 
-#### Support iOS, iPadOS dark mode
+### Support iOS, iPadOS dark mode
 <p align="center">
  <img width="238" alt="image" src="https://user-images.githubusercontent.com/71892904/182123978-b86ab7e2-498f-4160-aae1-58a6d541c8e3.png"> 
  <img width="468" alt="image" src="https://user-images.githubusercontent.com/71892904/182123998-57d0ecab-9911-470e-b39a-797f2f0a3105.png">
@@ -98,7 +98,7 @@ This interface will check for the user cart. If there is no item in the user car
  
 EatX application have native support for Apple Dark mode. User can switch between light and dark mode in iOS or iPadOS setting for this application to adapt to this change.
 
-#### iPhone, iPad, and iPod supported with iOS version 15.5 or newer
+### iPhone, iPad, and iPod supported with iOS version 15.5 or newer
 
 <p align="center">
   <img width="223" alt="image" src="https://user-images.githubusercontent.com/71892904/182124130-deb94904-ce99-4c5d-b832-5c162c2d5a61.png"> <img width="223" alt="image" src="https://user-images.githubusercontent.com/71892904/182124147-595f2bb4-b0b1-4c2a-abe3-721c5e8232f0.png">
@@ -106,7 +106,7 @@ EatX application have native support for Apple Dark mode. User can switch betwee
  <img width="411" alt="image" src="https://user-images.githubusercontent.com/71892904/182124231-759818cb-abe8-47cd-987c-7475badf853c.png">
 </p>
 
-### Future development
+## Future development
 Due to limited development time, many features will be pushed into the future development of the application. One of the main features that will be developed in the future is the ability to add the quantity of the. This means that there will be a counter asking how many amounts of the dish the user wishes to add to the card. Moreover, in addition to quantity, the cart summary will show the list of food by a group. Each food if they are in the cart as a single quantity will have the indication next to the name as “x1” and so on. This will create more friendliness towards the user end since the user does not need to manually calculate the total amount of the same dish.
 Moreover, device orientation is limited to portrait for all iPhone models since when rotate horizontally, the screen height is small and with the current element position, the user can't read the information. In contrast, it does not apply to the iPad user given that they have more screens for more content. Support for portrait orientation for iPhone will be added in the future development of the application.
 Additionally, a list view of the home page can be redesigned to have a more modern approach. Instead of a list view to display a list of food, it can be displayed as a card to embrace the visualization of the food instead of a small picture as in the current design. This follows the approach of the food detail view ensuring consistency throughout the application.
