@@ -15,8 +15,8 @@ Lecturer: Mr. Tom Huynh
 ## Table of contents
 
 - [Overview](#overview)
-- [Functionalities](#Functionalities)
 - [Built with](#built-with)
+- [Functionalities](#Functionalities)
 - [Future development](#Future-development)
 - [Application demo](#Application-demo)
 - [Author](#Author)
@@ -27,6 +27,17 @@ Lecturer: Mr. Tom Huynh
 
 There are many foods application that exist in the world: food delivery applications, restaurant ordering, and more. Many of them follow the traditional way of designing the application in an outdated design language, and many of them don’t have a minimalistic design and are user-friendly. Since then, the sparked of an idea to design a food ordering application that embraces user-friendliness, minimalistic and intuitive design that allows the user to focus on more of what matters, instead of trying to figure out how to use it. 
 Introducing EatX, an application that is designed for restaurants to replace traditional menus and bring technology into customer services. No need to wait for a waitress to come to you in order to order your food. No need to be pushed by a waitress when you are taking a long time to figure out what to order. With EatX, you can order your meal at peace.
+
+## Built with
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=swift" />
+  <img src="https://skillicons.dev/icons?i=figma">
+</p>
+
+- Swift, SwiftUI
+- XCode
+- Github & Git
+- Figma
 
 ### Functionalities
 
@@ -94,17 +105,6 @@ EatX application have native support for Apple Dark mode. User can switch betwee
 
  <img width="411" alt="image" src="https://user-images.githubusercontent.com/71892904/182124231-759818cb-abe8-47cd-987c-7475badf853c.png">
 </p>
-
-### Built with
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=swift" />
-  <img src="https://skillicons.dev/icons?i=figma">
-</p>
-
-- Swift, SwiftUI
-- XCode
-- Github & Git
-- Figma
 
 ### Future development
 Due to limited development time, many features will be pushed into the future development of the application. One of the main features that will be developed in the future is the ability to add the quantity of the. This means that there will be a counter asking how many amounts of the dish the user wishes to add to the card. Moreover, in addition to quantity, the cart summary will show the list of food by a group. Each food if they are in the cart as a single quantity will have the indication next to the name as “x1” and so on. This will create more friendliness towards the user end since the user does not need to manually calculate the total amount of the same dish.
