@@ -17,9 +17,9 @@ Lecturer: Mr. Tom Huynh
 - [Overview](#overview)
 - [Functionalities](#Functionalities)
 - [Built with](#built-with)
-- [Future development](#Future development)
-- [Application demo](#Application demo)
-- [Author](#author)
+- [Future development](#Future-development)
+- [Application demo](#Application-demo)
+- [Author](#Author)
 - [Acknowledgments](#acknowledgments)
 
 
